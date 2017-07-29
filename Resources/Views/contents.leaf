@@ -1,0 +1,14 @@
+#extend("base")
+
+#export("title") { Hello, #(name)! }
+
+#export("content") {
+
+  #loop(posts, "post") {
+    #(post.name)
+  }
+
+  #if(isLike) {
+    I love Vapor.
+  }
+}
